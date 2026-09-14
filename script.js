@@ -22,6 +22,11 @@ rl.question("Enter your guess: ", function(guess) {
         askGuess();
         return;
     }
+    if (words.indexOf(guess)===-1){
+        console.log("Please enter a valid word!");
+        askGuess();
+        return;
+    }
     attempts++;
     let result=["x","x","x","x","x"];
     let remainingLetter=targetWord.split("");
